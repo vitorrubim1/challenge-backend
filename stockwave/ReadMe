@@ -1,0 +1,7 @@
+
+As classes com herança (Aluno, Professor e Funcionário (Todas herdam de Usuário)) devem ser atualizadas da seguinte forma:
+	- Atualizar o Usuário para os campos herdados;
+	- Atualizar a classe correspondete para os campos únicos de cada classe
+
+Exemplo: Para alterar o nome de um aluno, devo alterar o nome do usuário de id_usuario correspondente.
+		 Para alterar a data de nascimento de um aluno, devo alterar o próprio aluno, setando sua nova dt_nasc_aluno;

@@ -1,0 +1,3457 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Stockwave",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/aluno": {
+      "get": {
+        "tags": [
+          "Aluno"
+        ],
+        "summary": "Listar Alunos",
+        "operationId": "ListarAlunos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Aluno"
+        ],
+        "summary": "Cadastrar Aluno",
+        "operationId": "CadastrarAluno",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarAlunoRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "25328392015",
+                      "email_usuario": "EMAIL@EMAILa.COM.BR",
+                      "nome_usuario": "ALUNO TESTE 2",
+                      "dt_nasc_aluno": "2000-07-12",
+                      "dt_reg_aluno": "2023-04-01",
+                      "moedas_aluno": 0,
+                      "nivel_aluno": {
+                        "nome_nivel": "EASY"
+                      },
+                      "senha_aluno": "senha2"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "25328392015",
+                "email_usuario": "EMAIL@EMAILa.COM.BR",
+                "nome_usuario": "ALUNO TESTE 2",
+                "dt_nasc_aluno": "2000-07-12",
+                "dt_reg_aluno": "2023-04-01",
+                "moedas_aluno": 0,
+                "nivel_aluno": {
+                  "nome_nivel": "EASY"
+                },
+                "senha_aluno": "senha2"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno/2": {
+      "get": {
+        "tags": [
+          "Aluno"
+        ],
+        "summary": "Exibir Aluno",
+        "operationId": "ExibirAluno",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Aluno"
+        ],
+        "summary": "Atualizar Aluno",
+        "operationId": "AtualizarAluno",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarAlunoRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "25328392015",
+                      "email_usuario": "EMAIL@EMAasasas.COM.BR",
+                      "id_usuario": 2,
+                      "nome_usuario": "ALUNO TESTE 2",
+                      "dt_nasc_aluno": "2000-07-14",
+                      "dt_reg_aluno": "2023-04-01",
+                      "moedas_aluno": 0,
+                      "nivel_aluno": {
+                        "nome_nivel": "EASY"
+                      },
+                      "senha_aluno": "senha2"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "25328392015",
+                "email_usuario": "EMAIL@EMAasasas.COM.BR",
+                "id_usuario": 2,
+                "nome_usuario": "ALUNO TESTE 2",
+                "dt_nasc_aluno": "2000-07-14",
+                "dt_reg_aluno": "2023-04-01",
+                "moedas_aluno": 0,
+                "nivel_aluno": {
+                  "nome_nivel": "EASY"
+                },
+                "senha_aluno": "senha2"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno/login": {
+      "post": {
+        "tags": [
+          "Aluno"
+        ],
+        "summary": "Validar Login Aluno",
+        "operationId": "ValidarLoginAluno",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ValidarLoginAlunoRequest"
+                  },
+                  {
+                    "example": {
+                      "email_usuario": "EMAIl@EMAILA.coM.BR1",
+                      "senha_aluno": "senha2"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email_usuario": "EMAIl@EMAILA.coM.BR1",
+                "senha_aluno": "senha2"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno/8": {
+      "delete": {
+        "tags": [
+          "Aluno"
+        ],
+        "summary": "Deletar Funcionário",
+        "operationId": "DeletarFuncionário",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno_certificado": {
+      "get": {
+        "tags": [
+          "Aluno_Certificado"
+        ],
+        "summary": "Listar Certificados dos Alunos",
+        "operationId": "ListarCertificadosdosAlunos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Aluno_Certificado"
+        ],
+        "summary": "Cadastrar Certificado no Aluno",
+        "operationId": "CadastrarCertificadonoAluno",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarCertificadonoAlunoRequest"
+                  },
+                  {
+                    "example": {
+                      "aluno": {
+                        "id_usuario": 1
+                      },
+                      "certificado": {
+                        "id_certificado": 4
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "aluno": {
+                  "id_usuario": 1
+                },
+                "certificado": {
+                  "id_certificado": 4
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno_certificado/1": {
+      "get": {
+        "tags": [
+          "Aluno_Certificado"
+        ],
+        "summary": "Exibir Certificado do Aluno",
+        "operationId": "ExibirCertificadodoAluno",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno_certificado/1/1": {
+      "put": {
+        "tags": [
+          "Aluno_Certificado"
+        ],
+        "summary": "Atualizar Certificado do Aluno",
+        "operationId": "AtualizarCertificadodoAluno",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarCertificadodoAlunoRequest"
+                  },
+                  {
+                    "example": {
+                      "aluno": {
+                        "id_usuario": 1
+                      },
+                      "certificado": {
+                        "id_certificado": 3
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "aluno": {
+                  "id_usuario": 1
+                },
+                "certificado": {
+                  "id_certificado": 3
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aluno_certificado/1/2": {
+      "delete": {
+        "tags": [
+          "Aluno_Certificado"
+        ],
+        "summary": "Deletar Certificado do Aluno",
+        "operationId": "DeletarCertificadodoAluno",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aula": {
+      "get": {
+        "tags": [
+          "Aula"
+        ],
+        "summary": "Listar Aulas",
+        "operationId": "ListarAulas",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Aula"
+        ],
+        "summary": "Cadastrar Aula",
+        "operationId": "CadastrarAula",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarAulaRequest"
+                  },
+                  {
+                    "example": {
+                      "conteudo_aula": "TESTE",
+                      "descricao_aula": "TESTE",
+                      "id_aula": 3,
+                      "nome_aula": "TESTE",
+                      "url_audio_aula": "HTTP://WWW.AUDIO.COM/TESTE",
+                      "url_video_aula": "HTTP://WWW.VIDEO.COM/TESTE"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "conteudo_aula": "TESTE",
+                "descricao_aula": "TESTE",
+                "id_aula": 3,
+                "nome_aula": "TESTE",
+                "url_audio_aula": "HTTP://WWW.AUDIO.COM/TESTE",
+                "url_video_aula": "HTTP://WWW.VIDEO.COM/TESTE"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aula/2": {
+      "get": {
+        "tags": [
+          "Aula"
+        ],
+        "summary": "Exibir Aula",
+        "operationId": "ExibirAula",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Aula"
+        ],
+        "summary": "Atualizar Aula",
+        "operationId": "AtualizarAula",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarAulaRequest"
+                  },
+                  {
+                    "example": {
+                      "conteudo_aula": "O QUE É IPO",
+                      "descricao_aula": "AULA EXPLICANDO IPO",
+                      "id_aula": 2,
+                      "nome_aula": "AULA 02",
+                      "url_audio_aula": "HTTP://WWW.AUDIO.COM/AULA02",
+                      "url_video_aula": "HTTP://WWW.VIDEO.COM/AULA02"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "conteudo_aula": "O QUE É IPO",
+                "descricao_aula": "AULA EXPLICANDO IPO",
+                "id_aula": 2,
+                "nome_aula": "AULA 02",
+                "url_audio_aula": "HTTP://WWW.AUDIO.COM/AULA02",
+                "url_video_aula": "HTTP://WWW.VIDEO.COM/AULA02"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/aula/3": {
+      "delete": {
+        "tags": [
+          "Aula"
+        ],
+        "summary": "Deletar Aula",
+        "operationId": "DeletarAula",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo": {
+      "get": {
+        "tags": [
+          "Módulo"
+        ],
+        "summary": "Listar Módulos",
+        "operationId": "ListarMódulos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Módulo"
+        ],
+        "summary": "Cadastrar Módulo",
+        "operationId": "CadastrarMódulo",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarMduloRequest"
+                  },
+                  {
+                    "example": {
+                      "nivel_modulo": {
+                        "nome_nivel": "CURSO_CONCLUIDO"
+                      },
+                      "nome_modulo": "MÓDULO 04",
+                      "url_imagem_modulo": "HTTP://WWW.IMAGEM.COM/IMAGEM04"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "nivel_modulo": {
+                  "nome_nivel": "CURSO_CONCLUIDO"
+                },
+                "nome_modulo": "MÓDULO 04",
+                "url_imagem_modulo": "HTTP://WWW.IMAGEM.COM/IMAGEM04"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo/subgrupos": {
+      "get": {
+        "tags": [
+          "Módulo"
+        ],
+        "summary": "Listar Módulos com Subgrupos",
+        "operationId": "ListarMóduloscomSubgrupos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo/3": {
+      "get": {
+        "tags": [
+          "Módulo"
+        ],
+        "summary": "Exibir Módulo",
+        "operationId": "ExibirMódulo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo/2": {
+      "put": {
+        "tags": [
+          "Módulo"
+        ],
+        "summary": "Atualizar Módulo",
+        "operationId": "AtualizarMódulo",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarMduloRequest"
+                  },
+                  {
+                    "example": {
+                      "id_modulo": 2,
+                      "nivel_modulo": {
+                        "nome_nivel": "HARD"
+                      },
+                      "nome_modulo": "MÓDULO 02",
+                      "url_imagem_modulo": "HTTP://WWW.IMAGEM.COM/IMAGEM02"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "id_modulo": 2,
+                "nivel_modulo": {
+                  "nome_nivel": "HARD"
+                },
+                "nome_modulo": "MÓDULO 02",
+                "url_imagem_modulo": "HTTP://WWW.IMAGEM.COM/IMAGEM02"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo/4": {
+      "delete": {
+        "tags": [
+          "Módulo"
+        ],
+        "summary": "Deletar Módulo",
+        "operationId": "DeletarMódulo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_aula": {
+      "get": {
+        "tags": [
+          "Módulo_Aula"
+        ],
+        "summary": "Listar Aulas dos Módulos",
+        "operationId": "ListarAulasdosMódulos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Módulo_Aula"
+        ],
+        "summary": "Cadastrar Aula no Módulo",
+        "operationId": "CadastrarAulanoMódulo",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarAulanoMduloRequest"
+                  },
+                  {
+                    "example": {
+                      "modulo": {
+                        "id_modulo": 1
+                      },
+                      "aula": {
+                        "id_aula": 2
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "modulo": {
+                  "id_modulo": 1
+                },
+                "aula": {
+                  "id_aula": 2
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_aula/1": {
+      "get": {
+        "tags": [
+          "Módulo_Aula"
+        ],
+        "summary": "Exibir Aulas do Módulo",
+        "operationId": "ExibirAulasdoMódulo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_aula/1/1": {
+      "put": {
+        "tags": [
+          "Módulo_Aula"
+        ],
+        "summary": "Atualizar Aula do Módulo",
+        "operationId": "AtualizarAuladoMódulo",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarAuladoMduloRequest"
+                  },
+                  {
+                    "example": {
+                      "modulo": {
+                        "id_modulo": 1
+                      },
+                      "aula": {
+                        "id_aula": 2
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "modulo": {
+                  "id_modulo": 1
+                },
+                "aula": {
+                  "id_aula": 2
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_aula/1/2": {
+      "delete": {
+        "tags": [
+          "Módulo_Aula"
+        ],
+        "summary": "Deletar Aula do Módulo",
+        "operationId": "DeletarAuladoMódulo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_questao": {
+      "get": {
+        "tags": [
+          "Módulo_Questão"
+        ],
+        "summary": "Listar Questões dos Módulos",
+        "operationId": "ListarQuestõesdosMódulos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Módulo_Questão"
+        ],
+        "summary": "Cadastrar Questão no Módulo",
+        "operationId": "CadastrarQuestãonoMódulo",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarQuestonoMduloRequest"
+                  },
+                  {
+                    "example": {
+                      "modulo": {
+                        "id_modulo": 2
+                      },
+                      "questao": {
+                        "id_questao": 1
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "modulo": {
+                  "id_modulo": 2
+                },
+                "questao": {
+                  "id_questao": 1
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_questao/2": {
+      "get": {
+        "tags": [
+          "Módulo_Questão"
+        ],
+        "summary": "Exibir Questões do Módulo",
+        "operationId": "ExibirQuestõesdoMódulo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_questao/1/1": {
+      "put": {
+        "tags": [
+          "Módulo_Questão"
+        ],
+        "summary": "Atualizar Questões do Módulo",
+        "operationId": "AtualizarQuestõesdoMódulo",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarQuestesdoMduloRequest"
+                  },
+                  {
+                    "example": {
+                      "modulo": {
+                        "id_modulo": 1
+                      },
+                      "questao": {
+                        "id_questao": 2
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "modulo": {
+                  "id_modulo": 1
+                },
+                "questao": {
+                  "id_questao": 2
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/modulo_questao/1/2": {
+      "delete": {
+        "tags": [
+          "Módulo_Questão"
+        ],
+        "summary": "Deletar Questão do Módulo",
+        "operationId": "DeletarQuestãodoMódulo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/movimentacao": {
+      "get": {
+        "tags": [
+          "Movimentação"
+        ],
+        "summary": "Listar Movimentações",
+        "operationId": "ListarMovimentações",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Movimentação"
+        ],
+        "summary": "Cadastrar Movimentação",
+        "operationId": "CadastrarMovimentação",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarMovimentaoRequest"
+                  },
+                  {
+                    "example": {
+                      "dt_movimentacao": "2020-05-20",
+                      "usuario_movimentacao": {
+                        "id_usuario": 2
+                      },
+                      "produto_movimentacao": {
+                        "id_produto": 2
+                      },
+                      "qtd_movimentacao": 30
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "dt_movimentacao": "2020-05-20",
+                "usuario_movimentacao": {
+                  "id_usuario": 2
+                },
+                "produto_movimentacao": {
+                  "id_produto": 2
+                },
+                "qtd_movimentacao": 30
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/movimentacao/1": {
+      "get": {
+        "tags": [
+          "Movimentação"
+        ],
+        "summary": "Exibir Movimentação",
+        "operationId": "ExibirMovimentação",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Movimentação"
+        ],
+        "summary": "Atualizar Movimentação",
+        "operationId": "AtualizarMovimentação",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarMovimentaoRequest"
+                  },
+                  {
+                    "example": {
+                      "id_movimentacao": 1,
+                      "dt_movimentacao": "2020-04-02",
+                      "usuario_movimentacao": {
+                        "id_usuario": 2
+                      },
+                      "produto_movimentacao": {
+                        "id_produto": 1
+                      },
+                      "qtd_movimentacao": 25
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "id_movimentacao": 1,
+                "dt_movimentacao": "2020-04-02",
+                "usuario_movimentacao": {
+                  "id_usuario": 2
+                },
+                "produto_movimentacao": {
+                  "id_produto": 1
+                },
+                "qtd_movimentacao": 25
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/movimentacao/3": {
+      "delete": {
+        "tags": [
+          "Movimentação"
+        ],
+        "summary": "Deletar Movimentação",
+        "operationId": "DeletarMovimentação",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/certificado": {
+      "get": {
+        "tags": [
+          "Certificado"
+        ],
+        "summary": "Listar Certificados",
+        "operationId": "ListarCertificados",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Certificado"
+        ],
+        "summary": "Cadastrar Certificado",
+        "operationId": "CadastrarCertificado",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarCertificadoRequest"
+                  },
+                  {
+                    "example": {
+                      "dt_certificado": "1997-07-01"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "dt_certificado": "1997-07-01"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/certificado/1": {
+      "get": {
+        "tags": [
+          "Certificado"
+        ],
+        "summary": "Exibir Certificados",
+        "operationId": "ExibirCertificados",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Certificado"
+        ],
+        "summary": "Atualizar Certificado",
+        "operationId": "AtualizarCertificado",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarCertificadoRequest"
+                  },
+                  {
+                    "example": {
+                      "dt_certificado": "2000-10-22",
+                      "id_certificado": 1
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "dt_certificado": "2000-10-22",
+                "id_certificado": 1
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/certificado/18": {
+      "delete": {
+        "tags": [
+          "Certificado"
+        ],
+        "summary": "Deletar Certificado",
+        "operationId": "DeletarCertificado",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/nivel": {
+      "get": {
+        "tags": [
+          "Nível"
+        ],
+        "summary": "Listar Níveis",
+        "operationId": "ListarNíveis",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Nível"
+        ],
+        "summary": "Cadastrar Nível",
+        "operationId": "CadastrarNível",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarNvelRequest"
+                  },
+                  {
+                    "example": {
+                      "nome_nivel": "MEDIUM"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "nome_nivel": "MEDIUM"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/nivel/hard": {
+      "get": {
+        "tags": [
+          "Nível"
+        ],
+        "summary": "Exibir Nível",
+        "operationId": "ExibirNível",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/nivel/HARDCX": {
+      "put": {
+        "tags": [
+          "Nível"
+        ],
+        "summary": "Atualizar Nível",
+        "operationId": "AtualizarNível",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarNvelRequest"
+                  },
+                  {
+                    "example": {
+                      "nome_nivel": "HARD"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "nome_nivel": "HARD"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/nivel/MEDIUM": {
+      "delete": {
+        "tags": [
+          "Nível"
+        ],
+        "summary": "Deletar Nível",
+        "operationId": "DeletarNível",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/produto": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Listar Produtos",
+        "operationId": "ListarProdutos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Cadastrar Produto",
+        "operationId": "CadastrarProduto",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarProdutoRequest"
+                  },
+                  {
+                    "example": {
+                      "imagem_produto": "HTTP://WWW.IMAGEM.COM/IMAGEM03",
+                      "nome_produto": "PRODUTO 07",
+                      "qtd_produto": 10,
+                      "valor_produto": 50.0
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "imagem_produto": "HTTP://WWW.IMAGEM.COM/IMAGEM03",
+                "nome_produto": "PRODUTO 07",
+                "qtd_produto": 10,
+                "valor_produto": 50.0
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/produto/2": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Exibir Produto",
+        "operationId": "ExibirProduto",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Atualizar Produto",
+        "operationId": "AtualizarProduto",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarProdutoRequest"
+                  },
+                  {
+                    "example": {
+                      "id_produto": 2,
+                      "imagem_produto": "HTTP://WWW.IMAGEM.COM/IMAGEM03",
+                      "nome_produto": "PRODUTO 03",
+                      "qtd_produto": 10,
+                      "valor_produto": 50.0
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "id_produto": 2,
+                "imagem_produto": "HTTP://WWW.IMAGEM.COM/IMAGEM03",
+                "nome_produto": "PRODUTO 03",
+                "qtd_produto": 10,
+                "valor_produto": 50.0
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/produto/3": {
+      "delete": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Deletar Produto",
+        "operationId": "DeletarProduto",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/professor": {
+      "get": {
+        "tags": [
+          "Professor"
+        ],
+        "summary": "Listar Professores",
+        "operationId": "ListarProfessores",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Professor"
+        ],
+        "summary": "Cadastrar Professor",
+        "operationId": "CadastrarProfessor",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarProfessorRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "46145226955",
+                      "email_usuario": "TESTANDO",
+                      "nome_usuario": "TESTANDO"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "46145226955",
+                "email_usuario": "TESTANDO",
+                "nome_usuario": "TESTANDO"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/professor/3": {
+      "get": {
+        "tags": [
+          "Professor"
+        ],
+        "summary": "Exibir Professor",
+        "operationId": "ExibirProfessor",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/professor/8": {
+      "put": {
+        "tags": [
+          "Professor"
+        ],
+        "summary": "Atualizar Professor",
+        "operationId": "AtualizarProfessor",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarProfessorRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "12345678910",
+                      "email_usuario": "PROF@GMAIL.COM",
+                      "id_usuario": 8,
+                      "nome_usuario": "PROFESSOR TESTE"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "12345678910",
+                "email_usuario": "PROF@GMAIL.COM",
+                "id_usuario": 8,
+                "nome_usuario": "PROFESSOR TESTE"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Professor"
+        ],
+        "summary": "Deletar Professor",
+        "operationId": "DeletarProfessor",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/funcionario": {
+      "get": {
+        "tags": [
+          "Funcionário"
+        ],
+        "summary": "Listar Funcionários",
+        "operationId": "ListarFuncionários",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Funcionário"
+        ],
+        "summary": "Cadastrar Funcionário",
+        "operationId": "CadastrarFuncionário",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarFuncionrioRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "00000000001",
+                      "email_usuario": "ADMIN",
+                      "nome_usuario": "ADMIN",
+                      "cargo_funcionario": "ADM",
+                      "senha_funcionario": "admin"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "00000000001",
+                "email_usuario": "ADMIN",
+                "nome_usuario": "ADMIN",
+                "cargo_funcionario": "ADM",
+                "senha_funcionario": "admin"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/funcionario/4": {
+      "get": {
+        "tags": [
+          "Funcionário"
+        ],
+        "summary": "Exibir Funcionário",
+        "operationId": "ExibirFuncionário",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Funcionário"
+        ],
+        "summary": "Atualizar Funcionário",
+        "operationId": "AtualizarFuncionário",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarFuncionrioRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "00000000000",
+                      "email_usuario": "ADMIN",
+                      "nome_usuario": "ADMIN",
+                      "cargo_funcionario": "ADMIN",
+                      "id_usuario": 4,
+                      "senha_funcionario": "admin"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "00000000000",
+                "email_usuario": "ADMIN",
+                "nome_usuario": "ADMIN",
+                "cargo_funcionario": "ADMIN",
+                "id_usuario": 4,
+                "senha_funcionario": "admin"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/funcionario/5": {
+      "delete": {
+        "tags": [
+          "Funcionário"
+        ],
+        "summary": "Deletar Funcionário",
+        "operationId": "DeleteDeletarFuncionário",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/resposta": {
+      "get": {
+        "tags": [
+          "Resposta"
+        ],
+        "summary": "Listar Respostas",
+        "operationId": "ListarRespostas",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Resposta"
+        ],
+        "summary": "Cadastrar Resposta",
+        "operationId": "CadastrarResposta",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarRespostaRequest"
+                  },
+                  {
+                    "example": {
+                      "resposta": "H"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "resposta": "H"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/resposta/e": {
+      "get": {
+        "tags": [
+          "Resposta"
+        ],
+        "summary": "Exibir Resposta",
+        "operationId": "ExibirResposta",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/resposta/F": {
+      "put": {
+        "tags": [
+          "Resposta"
+        ],
+        "summary": "Atualizar Resposta",
+        "operationId": "AtualizarResposta",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarRespostaRequest"
+                  },
+                  {
+                    "example": {
+                      "resposta": "A"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "resposta": "A"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/questao/1/verificar": {
+      "post": {
+        "tags": [
+          "Resposta"
+        ],
+        "summary": "Validar Resposta da Questão",
+        "operationId": "ValidarRespostadaQuestão",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ValidarRespostadaQuestoRequest"
+                  },
+                  {
+                    "example": {
+                      "resposta": "a"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "resposta": "a"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/resposta/h": {
+      "delete": {
+        "tags": [
+          "Resposta"
+        ],
+        "summary": "Deletar Resposta",
+        "operationId": "DeletarResposta",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuario": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Listar Usuários",
+        "operationId": "ListarUsuários",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Cadastrar Usuário",
+        "operationId": "CadastrarUsuário",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarUsurioRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "46145226960",
+                      "email_usuario": "TESTE 3",
+                      "nome_usuario": "TESTE 3"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "46145226960",
+                "email_usuario": "TESTE 3",
+                "nome_usuario": "TESTE 3"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuario/2": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Exibir Usuário",
+        "operationId": "ExibirUsuário",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuario/3": {
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Atualizar Usuário",
+        "operationId": "AtualizarUsuário",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarUsurioRequest"
+                  },
+                  {
+                    "example": {
+                      "cpf_usuario": "44522615825",
+                      "email_usuario": "PROF@GMAIL.COM",
+                      "id_usuario": 3,
+                      "nome_usuario": "PROFESSOR TESTE"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "cpf_usuario": "44522615825",
+                "email_usuario": "PROF@GMAIL.COM",
+                "id_usuario": 3,
+                "nome_usuario": "PROFESSOR TESTE"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuario/7": {
+      "delete": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Deletar Usuário",
+        "operationId": "DeletarUsuário",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/questao": {
+      "get": {
+        "tags": [
+          "Questão"
+        ],
+        "summary": "Listar Questões",
+        "operationId": "ListarQuestões",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Questão"
+        ],
+        "summary": "Cadastrar Questão",
+        "operationId": "CadastrarQuestão",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CadastrarQuestoRequest"
+                  },
+                  {
+                    "example": {
+                      "alt_a_questao": "ALT A",
+                      "alt_b_questao": "ALT B",
+                      "alt_c_questao": "ALT C",
+                      "alt_d_questao": "ALT D",
+                      "alt_e_questao": "ALT E",
+                      "pergunta_questao": "PERG 1",
+                      "resposta_questao": {
+                        "resposta": "C"
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "alt_a_questao": "ALT A",
+                "alt_b_questao": "ALT B",
+                "alt_c_questao": "ALT C",
+                "alt_d_questao": "ALT D",
+                "alt_e_questao": "ALT E",
+                "pergunta_questao": "PERG 1",
+                "resposta_questao": {
+                  "resposta": "C"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/questao/1": {
+      "get": {
+        "tags": [
+          "Questão"
+        ],
+        "summary": "Exibir Questão",
+        "operationId": "ExibirQuestão",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Questão"
+        ],
+        "summary": "Atualizar Questão",
+        "operationId": "AtualizarQuestão",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AtualizarQuestoRequest"
+                  },
+                  {
+                    "example": {
+                      "alt_a_questao": "Maior controle sobre a propriedade das ações.",
+                      "alt_b_questao": "Maior controle sobre a propriedade das ações.",
+                      "alt_c_questao": "Menor exposição ao escrutínio público e regulatório.",
+                      "alt_d_questao": "Maior flexibilidade para tomar decisões de negócios.",
+                      "alt_e_questao": "Natan Perigoso",
+                      "id_questao": 1,
+                      "pergunta_questao": "Quais são os principais benefícios de uma IPO para uma empresa?",
+                      "resposta_questao": {
+                        "resposta": "A"
+                      }
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "alt_a_questao": "Maior controle sobre a propriedade das ações.",
+                "alt_b_questao": "Maior controle sobre a propriedade das ações.",
+                "alt_c_questao": "Menor exposição ao escrutínio público e regulatório.",
+                "alt_d_questao": "Maior flexibilidade para tomar decisões de negócios.",
+                "alt_e_questao": "Natan Perigoso",
+                "id_questao": 1,
+                "pergunta_questao": "Quais são os principais benefícios de uma IPO para uma empresa?",
+                "resposta_questao": {
+                  "resposta": "A"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/questao/3": {
+      "delete": {
+        "tags": [
+          "Questão"
+        ],
+        "summary": "Deletar Questão",
+        "operationId": "DeletarQuestão",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AtualizarAlunoRequest": {
+        "title": "AtualizarAlunoRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "id_usuario",
+          "nome_usuario",
+          "dt_nasc_aluno",
+          "dt_reg_aluno",
+          "moedas_aluno",
+          "nivel_aluno",
+          "senha_aluno"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome_usuario": {
+            "type": "string"
+          },
+          "dt_nasc_aluno": {
+            "type": "string"
+          },
+          "dt_reg_aluno": {
+            "type": "string"
+          },
+          "moedas_aluno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivel_aluno": {
+            "$ref": "#/components/schemas/NivelAluno"
+          },
+          "senha_aluno": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "25328392015",
+          "email_usuario": "EMAIL@EMAasasas.COM.BR",
+          "id_usuario": 2,
+          "nome_usuario": "ALUNO TESTE 2",
+          "dt_nasc_aluno": "2000-07-14",
+          "dt_reg_aluno": "2023-04-01",
+          "moedas_aluno": 0,
+          "nivel_aluno": {
+            "nome_nivel": "EASY"
+          },
+          "senha_aluno": "senha2"
+        }
+      },
+      "NivelAluno": {
+        "title": "NivelAluno",
+        "required": [
+          "nome_nivel"
+        ],
+        "type": "object",
+        "properties": {
+          "nome_nivel": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "nome_nivel": "EASY"
+        }
+      },
+      "CadastrarAlunoRequest": {
+        "title": "CadastrarAlunoRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "nome_usuario",
+          "dt_nasc_aluno",
+          "dt_reg_aluno",
+          "moedas_aluno",
+          "nivel_aluno",
+          "senha_aluno"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "nome_usuario": {
+            "type": "string"
+          },
+          "dt_nasc_aluno": {
+            "type": "string"
+          },
+          "dt_reg_aluno": {
+            "type": "string"
+          },
+          "moedas_aluno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivel_aluno": {
+            "$ref": "#/components/schemas/NivelAluno"
+          },
+          "senha_aluno": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "25328392015",
+          "email_usuario": "EMAIL@EMAILa.COM.BR",
+          "nome_usuario": "ALUNO TESTE 2",
+          "dt_nasc_aluno": "2000-07-12",
+          "dt_reg_aluno": "2023-04-01",
+          "moedas_aluno": 0,
+          "nivel_aluno": {
+            "nome_nivel": "EASY"
+          },
+          "senha_aluno": "senha2"
+        }
+      },
+      "ValidarLoginAlunoRequest": {
+        "title": "ValidarLoginAlunoRequest",
+        "required": [
+          "email_usuario",
+          "senha_aluno"
+        ],
+        "type": "object",
+        "properties": {
+          "email_usuario": {
+            "type": "string"
+          },
+          "senha_aluno": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email_usuario": "EMAIl@EMAILA.coM.BR1",
+          "senha_aluno": "senha2"
+        }
+      },
+      "AtualizarCertificadodoAlunoRequest": {
+        "title": "AtualizarCertificadodoAlunoRequest",
+        "required": [
+          "aluno",
+          "certificado"
+        ],
+        "type": "object",
+        "properties": {
+          "aluno": {
+            "$ref": "#/components/schemas/Aluno"
+          },
+          "certificado": {
+            "$ref": "#/components/schemas/Certificado"
+          }
+        },
+        "example": {
+          "aluno": {
+            "id_usuario": 1
+          },
+          "certificado": {
+            "id_certificado": 3
+          }
+        }
+      },
+      "Aluno": {
+        "title": "Aluno",
+        "required": [
+          "id_usuario"
+        ],
+        "type": "object",
+        "properties": {
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_usuario": 1
+        }
+      },
+      "Certificado": {
+        "title": "Certificado",
+        "required": [
+          "id_certificado"
+        ],
+        "type": "object",
+        "properties": {
+          "id_certificado": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_certificado": 3
+        }
+      },
+      "CadastrarCertificadonoAlunoRequest": {
+        "title": "CadastrarCertificadonoAlunoRequest",
+        "required": [
+          "aluno",
+          "certificado"
+        ],
+        "type": "object",
+        "properties": {
+          "aluno": {
+            "$ref": "#/components/schemas/Aluno"
+          },
+          "certificado": {
+            "$ref": "#/components/schemas/Certificado"
+          }
+        },
+        "example": {
+          "aluno": {
+            "id_usuario": 1
+          },
+          "certificado": {
+            "id_certificado": 4
+          }
+        }
+      },
+      "AtualizarAulaRequest": {
+        "title": "AtualizarAulaRequest",
+        "required": [
+          "conteudo_aula",
+          "descricao_aula",
+          "id_aula",
+          "nome_aula",
+          "url_audio_aula",
+          "url_video_aula"
+        ],
+        "type": "object",
+        "properties": {
+          "conteudo_aula": {
+            "type": "string"
+          },
+          "descricao_aula": {
+            "type": "string"
+          },
+          "id_aula": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome_aula": {
+            "type": "string"
+          },
+          "url_audio_aula": {
+            "type": "string"
+          },
+          "url_video_aula": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "conteudo_aula": "O QUE É IPO",
+          "descricao_aula": "AULA EXPLICANDO IPO",
+          "id_aula": 2,
+          "nome_aula": "AULA 02",
+          "url_audio_aula": "HTTP://WWW.AUDIO.COM/AULA02",
+          "url_video_aula": "HTTP://WWW.VIDEO.COM/AULA02"
+        }
+      },
+      "CadastrarAulaRequest": {
+        "title": "CadastrarAulaRequest",
+        "required": [
+          "conteudo_aula",
+          "descricao_aula",
+          "id_aula",
+          "nome_aula",
+          "url_audio_aula",
+          "url_video_aula"
+        ],
+        "type": "object",
+        "properties": {
+          "conteudo_aula": {
+            "type": "string"
+          },
+          "descricao_aula": {
+            "type": "string"
+          },
+          "id_aula": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome_aula": {
+            "type": "string"
+          },
+          "url_audio_aula": {
+            "type": "string"
+          },
+          "url_video_aula": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "conteudo_aula": "TESTE",
+          "descricao_aula": "TESTE",
+          "id_aula": 3,
+          "nome_aula": "TESTE",
+          "url_audio_aula": "HTTP://WWW.AUDIO.COM/TESTE",
+          "url_video_aula": "HTTP://WWW.VIDEO.COM/TESTE"
+        }
+      },
+      "AtualizarMduloRequest": {
+        "title": "AtualizarMduloRequest",
+        "required": [
+          "id_modulo",
+          "nivel_modulo",
+          "nome_modulo",
+          "url_imagem_modulo"
+        ],
+        "type": "object",
+        "properties": {
+          "id_modulo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivel_modulo": {
+            "$ref": "#/components/schemas/NivelModulo"
+          },
+          "nome_modulo": {
+            "type": "string"
+          },
+          "url_imagem_modulo": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "id_modulo": 2,
+          "nivel_modulo": {
+            "nome_nivel": "HARD"
+          },
+          "nome_modulo": "MÓDULO 02",
+          "url_imagem_modulo": "HTTP://WWW.IMAGEM.COM/IMAGEM02"
+        }
+      },
+      "NivelModulo": {
+        "title": "NivelModulo",
+        "required": [
+          "nome_nivel"
+        ],
+        "type": "object",
+        "properties": {
+          "nome_nivel": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "nome_nivel": "HARD"
+        }
+      },
+      "CadastrarMduloRequest": {
+        "title": "CadastrarMduloRequest",
+        "required": [
+          "nivel_modulo",
+          "nome_modulo",
+          "url_imagem_modulo"
+        ],
+        "type": "object",
+        "properties": {
+          "nivel_modulo": {
+            "$ref": "#/components/schemas/NivelModulo"
+          },
+          "nome_modulo": {
+            "type": "string"
+          },
+          "url_imagem_modulo": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "nivel_modulo": {
+            "nome_nivel": "CURSO_CONCLUIDO"
+          },
+          "nome_modulo": "MÓDULO 04",
+          "url_imagem_modulo": "HTTP://WWW.IMAGEM.COM/IMAGEM04"
+        }
+      },
+      "AtualizarAuladoMduloRequest": {
+        "title": "AtualizarAuladoMduloRequest",
+        "required": [
+          "modulo",
+          "aula"
+        ],
+        "type": "object",
+        "properties": {
+          "modulo": {
+            "$ref": "#/components/schemas/Modulo"
+          },
+          "aula": {
+            "$ref": "#/components/schemas/Aula"
+          }
+        },
+        "example": {
+          "modulo": {
+            "id_modulo": 1
+          },
+          "aula": {
+            "id_aula": 2
+          }
+        }
+      },
+      "Modulo": {
+        "title": "Modulo",
+        "required": [
+          "id_modulo"
+        ],
+        "type": "object",
+        "properties": {
+          "id_modulo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_modulo": 1
+        }
+      },
+      "Aula": {
+        "title": "Aula",
+        "required": [
+          "id_aula"
+        ],
+        "type": "object",
+        "properties": {
+          "id_aula": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_aula": 2
+        }
+      },
+      "CadastrarAulanoMduloRequest": {
+        "title": "CadastrarAulanoMduloRequest",
+        "required": [
+          "modulo",
+          "aula"
+        ],
+        "type": "object",
+        "properties": {
+          "modulo": {
+            "$ref": "#/components/schemas/Modulo"
+          },
+          "aula": {
+            "$ref": "#/components/schemas/Aula"
+          }
+        },
+        "example": {
+          "modulo": {
+            "id_modulo": 1
+          },
+          "aula": {
+            "id_aula": 2
+          }
+        }
+      },
+      "AtualizarQuestesdoMduloRequest": {
+        "title": "AtualizarQuestesdoMduloRequest",
+        "required": [
+          "modulo",
+          "questao"
+        ],
+        "type": "object",
+        "properties": {
+          "modulo": {
+            "$ref": "#/components/schemas/Modulo"
+          },
+          "questao": {
+            "$ref": "#/components/schemas/Questao"
+          }
+        },
+        "example": {
+          "modulo": {
+            "id_modulo": 1
+          },
+          "questao": {
+            "id_questao": 2
+          }
+        }
+      },
+      "Questao": {
+        "title": "Questao",
+        "required": [
+          "id_questao"
+        ],
+        "type": "object",
+        "properties": {
+          "id_questao": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_questao": 2
+        }
+      },
+      "CadastrarQuestonoMduloRequest": {
+        "title": "CadastrarQuestonoMduloRequest",
+        "required": [
+          "modulo",
+          "questao"
+        ],
+        "type": "object",
+        "properties": {
+          "modulo": {
+            "$ref": "#/components/schemas/Modulo"
+          },
+          "questao": {
+            "$ref": "#/components/schemas/Questao"
+          }
+        },
+        "example": {
+          "modulo": {
+            "id_modulo": 2
+          },
+          "questao": {
+            "id_questao": 1
+          }
+        }
+      },
+      "AtualizarMovimentaoRequest": {
+        "title": "AtualizarMovimentaoRequest",
+        "required": [
+          "id_movimentacao",
+          "dt_movimentacao",
+          "usuario_movimentacao",
+          "produto_movimentacao",
+          "qtd_movimentacao"
+        ],
+        "type": "object",
+        "properties": {
+          "id_movimentacao": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dt_movimentacao": {
+            "type": "string"
+          },
+          "usuario_movimentacao": {
+            "$ref": "#/components/schemas/UsuarioMovimentacao"
+          },
+          "produto_movimentacao": {
+            "$ref": "#/components/schemas/ProdutoMovimentacao"
+          },
+          "qtd_movimentacao": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_movimentacao": 1,
+          "dt_movimentacao": "2020-04-02",
+          "usuario_movimentacao": {
+            "id_usuario": 2
+          },
+          "produto_movimentacao": {
+            "id_produto": 1
+          },
+          "qtd_movimentacao": 25
+        }
+      },
+      "UsuarioMovimentacao": {
+        "title": "UsuarioMovimentacao",
+        "required": [
+          "id_usuario"
+        ],
+        "type": "object",
+        "properties": {
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_usuario": 2
+        }
+      },
+      "ProdutoMovimentacao": {
+        "title": "ProdutoMovimentacao",
+        "required": [
+          "id_produto"
+        ],
+        "type": "object",
+        "properties": {
+          "id_produto": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id_produto": 1
+        }
+      },
+      "CadastrarMovimentaoRequest": {
+        "title": "CadastrarMovimentaoRequest",
+        "required": [
+          "dt_movimentacao",
+          "usuario_movimentacao",
+          "produto_movimentacao",
+          "qtd_movimentacao"
+        ],
+        "type": "object",
+        "properties": {
+          "dt_movimentacao": {
+            "type": "string"
+          },
+          "usuario_movimentacao": {
+            "$ref": "#/components/schemas/UsuarioMovimentacao"
+          },
+          "produto_movimentacao": {
+            "$ref": "#/components/schemas/ProdutoMovimentacao"
+          },
+          "qtd_movimentacao": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "dt_movimentacao": "2020-05-20",
+          "usuario_movimentacao": {
+            "id_usuario": 2
+          },
+          "produto_movimentacao": {
+            "id_produto": 2
+          },
+          "qtd_movimentacao": 30
+        }
+      },
+      "AtualizarCertificadoRequest": {
+        "title": "AtualizarCertificadoRequest",
+        "required": [
+          "dt_certificado",
+          "id_certificado"
+        ],
+        "type": "object",
+        "properties": {
+          "dt_certificado": {
+            "type": "string"
+          },
+          "id_certificado": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "dt_certificado": "2000-10-22",
+          "id_certificado": 1
+        }
+      },
+      "CadastrarCertificadoRequest": {
+        "title": "CadastrarCertificadoRequest",
+        "required": [
+          "dt_certificado"
+        ],
+        "type": "object",
+        "properties": {
+          "dt_certificado": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "dt_certificado": "1997-07-01"
+        }
+      },
+      "AtualizarNvelRequest": {
+        "title": "AtualizarNvelRequest",
+        "required": [
+          "nome_nivel"
+        ],
+        "type": "object",
+        "properties": {
+          "nome_nivel": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "nome_nivel": "HARD"
+        }
+      },
+      "CadastrarNvelRequest": {
+        "title": "CadastrarNvelRequest",
+        "required": [
+          "nome_nivel"
+        ],
+        "type": "object",
+        "properties": {
+          "nome_nivel": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "nome_nivel": "MEDIUM"
+        }
+      },
+      "AtualizarProdutoRequest": {
+        "title": "AtualizarProdutoRequest",
+        "required": [
+          "id_produto",
+          "imagem_produto",
+          "nome_produto",
+          "qtd_produto",
+          "valor_produto"
+        ],
+        "type": "object",
+        "properties": {
+          "id_produto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imagem_produto": {
+            "type": "string"
+          },
+          "nome_produto": {
+            "type": "string"
+          },
+          "qtd_produto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valor_produto": {
+            "type": "number"
+          }
+        },
+        "example": {
+          "id_produto": 2,
+          "imagem_produto": "HTTP://WWW.IMAGEM.COM/IMAGEM03",
+          "nome_produto": "PRODUTO 03",
+          "qtd_produto": 10,
+          "valor_produto": 50.0
+        }
+      },
+      "CadastrarProdutoRequest": {
+        "title": "CadastrarProdutoRequest",
+        "required": [
+          "imagem_produto",
+          "nome_produto",
+          "qtd_produto",
+          "valor_produto"
+        ],
+        "type": "object",
+        "properties": {
+          "imagem_produto": {
+            "type": "string"
+          },
+          "nome_produto": {
+            "type": "string"
+          },
+          "qtd_produto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valor_produto": {
+            "type": "number"
+          }
+        },
+        "example": {
+          "imagem_produto": "HTTP://WWW.IMAGEM.COM/IMAGEM03",
+          "nome_produto": "PRODUTO 07",
+          "qtd_produto": 10,
+          "valor_produto": 50.0
+        }
+      },
+      "AtualizarProfessorRequest": {
+        "title": "AtualizarProfessorRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "id_usuario",
+          "nome_usuario"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome_usuario": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "12345678910",
+          "email_usuario": "PROF@GMAIL.COM",
+          "id_usuario": 8,
+          "nome_usuario": "PROFESSOR TESTE"
+        }
+      },
+      "CadastrarProfessorRequest": {
+        "title": "CadastrarProfessorRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "nome_usuario"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "nome_usuario": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "46145226955",
+          "email_usuario": "TESTANDO",
+          "nome_usuario": "TESTANDO"
+        }
+      },
+      "AtualizarFuncionrioRequest": {
+        "title": "AtualizarFuncionrioRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "nome_usuario",
+          "cargo_funcionario",
+          "id_usuario",
+          "senha_funcionario"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "nome_usuario": {
+            "type": "string"
+          },
+          "cargo_funcionario": {
+            "type": "string"
+          },
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "senha_funcionario": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "00000000000",
+          "email_usuario": "ADMIN",
+          "nome_usuario": "ADMIN",
+          "cargo_funcionario": "ADMIN",
+          "id_usuario": 4,
+          "senha_funcionario": "admin"
+        }
+      },
+      "CadastrarFuncionrioRequest": {
+        "title": "CadastrarFuncionrioRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "nome_usuario",
+          "cargo_funcionario",
+          "senha_funcionario"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "nome_usuario": {
+            "type": "string"
+          },
+          "cargo_funcionario": {
+            "type": "string"
+          },
+          "senha_funcionario": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "00000000001",
+          "email_usuario": "ADMIN",
+          "nome_usuario": "ADMIN",
+          "cargo_funcionario": "ADM",
+          "senha_funcionario": "admin"
+        }
+      },
+      "AtualizarRespostaRequest": {
+        "title": "AtualizarRespostaRequest",
+        "required": [
+          "resposta"
+        ],
+        "type": "object",
+        "properties": {
+          "resposta": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "resposta": "A"
+        }
+      },
+      "CadastrarRespostaRequest": {
+        "title": "CadastrarRespostaRequest",
+        "required": [
+          "resposta"
+        ],
+        "type": "object",
+        "properties": {
+          "resposta": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "resposta": "H"
+        }
+      },
+      "ValidarRespostadaQuestoRequest": {
+        "title": "ValidarRespostadaQuestoRequest",
+        "required": [
+          "resposta"
+        ],
+        "type": "object",
+        "properties": {
+          "resposta": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "resposta": "a"
+        }
+      },
+      "AtualizarUsurioRequest": {
+        "title": "AtualizarUsurioRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "id_usuario",
+          "nome_usuario"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome_usuario": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "44522615825",
+          "email_usuario": "PROF@GMAIL.COM",
+          "id_usuario": 3,
+          "nome_usuario": "PROFESSOR TESTE"
+        }
+      },
+      "CadastrarUsurioRequest": {
+        "title": "CadastrarUsurioRequest",
+        "required": [
+          "cpf_usuario",
+          "email_usuario",
+          "nome_usuario"
+        ],
+        "type": "object",
+        "properties": {
+          "cpf_usuario": {
+            "type": "string"
+          },
+          "email_usuario": {
+            "type": "string"
+          },
+          "nome_usuario": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "cpf_usuario": "46145226960",
+          "email_usuario": "TESTE 3",
+          "nome_usuario": "TESTE 3"
+        }
+      },
+      "AtualizarQuestoRequest": {
+        "title": "AtualizarQuestoRequest",
+        "required": [
+          "alt_a_questao",
+          "alt_b_questao",
+          "alt_c_questao",
+          "alt_d_questao",
+          "alt_e_questao",
+          "id_questao",
+          "pergunta_questao",
+          "resposta_questao"
+        ],
+        "type": "object",
+        "properties": {
+          "alt_a_questao": {
+            "type": "string"
+          },
+          "alt_b_questao": {
+            "type": "string"
+          },
+          "alt_c_questao": {
+            "type": "string"
+          },
+          "alt_d_questao": {
+            "type": "string"
+          },
+          "alt_e_questao": {
+            "type": "string"
+          },
+          "id_questao": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pergunta_questao": {
+            "type": "string"
+          },
+          "resposta_questao": {
+            "$ref": "#/components/schemas/RespostaQuestao"
+          }
+        },
+        "example": {
+          "alt_a_questao": "Maior controle sobre a propriedade das ações.",
+          "alt_b_questao": "Maior controle sobre a propriedade das ações.",
+          "alt_c_questao": "Menor exposição ao escrutínio público e regulatório.",
+          "alt_d_questao": "Maior flexibilidade para tomar decisões de negócios.",
+          "alt_e_questao": "Natan Perigoso",
+          "id_questao": 1,
+          "pergunta_questao": "Quais são os principais benefícios de uma IPO para uma empresa?",
+          "resposta_questao": {
+            "resposta": "A"
+          }
+        }
+      },
+      "RespostaQuestao": {
+        "title": "RespostaQuestao",
+        "required": [
+          "resposta"
+        ],
+        "type": "object",
+        "properties": {
+          "resposta": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "resposta": "A"
+        }
+      },
+      "CadastrarQuestoRequest": {
+        "title": "CadastrarQuestoRequest",
+        "required": [
+          "alt_a_questao",
+          "alt_b_questao",
+          "alt_c_questao",
+          "alt_d_questao",
+          "alt_e_questao",
+          "pergunta_questao",
+          "resposta_questao"
+        ],
+        "type": "object",
+        "properties": {
+          "alt_a_questao": {
+            "type": "string"
+          },
+          "alt_b_questao": {
+            "type": "string"
+          },
+          "alt_c_questao": {
+            "type": "string"
+          },
+          "alt_d_questao": {
+            "type": "string"
+          },
+          "alt_e_questao": {
+            "type": "string"
+          },
+          "pergunta_questao": {
+            "type": "string"
+          },
+          "resposta_questao": {
+            "$ref": "#/components/schemas/RespostaQuestao"
+          }
+        },
+        "example": {
+          "alt_a_questao": "ALT A",
+          "alt_b_questao": "ALT B",
+          "alt_c_questao": "ALT C",
+          "alt_d_questao": "ALT D",
+          "alt_e_questao": "ALT E",
+          "pergunta_questao": "PERG 1",
+          "resposta_questao": {
+            "resposta": "C"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Aluno"
+    },
+    {
+      "name": "Aluno_Certificado"
+    },
+    {
+      "name": "Aula"
+    },
+    {
+      "name": "Módulo"
+    },
+    {
+      "name": "Módulo_Aula"
+    },
+    {
+      "name": "Módulo_Questão"
+    },
+    {
+      "name": "Movimentação"
+    },
+    {
+      "name": "Certificado"
+    },
+    {
+      "name": "Nível"
+    },
+    {
+      "name": "Produto"
+    },
+    {
+      "name": "Professor"
+    },
+    {
+      "name": "Funcionário"
+    },
+    {
+      "name": "Resposta"
+    },
+    {
+      "name": "Usuario"
+    },
+    {
+      "name": "Questão"
+    }
+  ]
+}
